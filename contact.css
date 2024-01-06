@@ -32,26 +32,34 @@ nav ul li{
     margin: 10px 20px ;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    display: inline-block; /* Add this line */
+    padding: 5px; /* Add padding for better clickability */
 }
 
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: -6px;
     transition: 0.5s;
+    transform: translateX(-50%); /* Center the underline */
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
 
 header {
@@ -61,49 +69,73 @@ header {
     padding: 20px;
 }
 
-section {
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-left img {
+    max-width: 50%; /* Set maximum width to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+
+.contact-right {
+    flex: 1;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    color: #fff; /* Set text color to white */
 }
 
-h2 {
-    color: #662d91; /* Maroon */
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #662d91; /* Maroon */
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #17134d; /* Maroon */
+.social-buttons a {
+    display: inline-block;
+    background-color: #19a37e; /* WhatsApp green */
     color: #fff;
     padding: 10px 20px;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
+    margin: 0 10px;
 }
 
-button:hover {
-    background-color: #662d91; /* Darker Maroon */
+.social-buttons a.email-button {
+    background-color: #19a37e; /* Google blue */
 }
+
+.social-buttons a.linkedin-button {
+    background-color: #19a37e; /* LinkedIn blue */
+}
+
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-address {
+    margin-top: 30px;
+}
+
+.contact-address h4, .contact-address p {
+    margin-bottom: 10px;
+}
+
+.contact-address p:last-child {
+    margin-bottom: 30px; /* Adjust the bottom margin for the last paragraph */
+}
+
+
 
 footer {
     background-color: #ddd; /* Lavender Blue */
