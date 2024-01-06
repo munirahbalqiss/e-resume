@@ -71,14 +71,14 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 
-.header-text h1 span{
+h1 span{
     color: #ff004f;
 }
 
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #17134d; /* Maroon */
+    background-color: #134d4a; /* Maroon */
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -86,7 +86,7 @@ nav ul li a:hover::after{
 }
 
 .download-button:hover {
-    background-color: #662d91; /* Darker Maroon on hover */
+    background-color: #912d2d; /* Darker Maroon on hover */
 }
 
 footer {
